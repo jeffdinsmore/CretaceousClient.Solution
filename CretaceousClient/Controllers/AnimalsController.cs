@@ -15,11 +15,28 @@ namespace CretaceousClient.Controllers
       var allAnimals = Animal.GetAnimals();
       return View(allAnimals);
     }
+    // public IActionResult Create()
+    // {
+    //   return View();
+    // }
+
     [HttpPost]
     public IActionResult Index(Animal animal)
     {
       Animal.Post(animal);
       return RedirectToAction("Index");
+    }
+
+    // public IActionResult Create()
+    // {
+    //   // var allAnimals = Animal.GetAnimals();
+      
+    //   return View();
+    // }
+    public IActionResult Create(Animal animal)
+    {
+      Animal.Post(animal);
+      return View(animal);
     }
 
     public IActionResult Details(int id)
@@ -47,5 +64,17 @@ namespace CretaceousClient.Controllers
       Animal.Delete(id);
       return RedirectToAction("Index");
     }
+
+    // public IActionResult Create()
+    // {
+    //   return RedirectToAction("Create");
+    // }
+
+    // public ActionResult Create(Animal animal)
+    // {
+    //   Animal.Post(animal);
+      
+    //   return RedirectToAction("Index");
+    // }
   }
 }
