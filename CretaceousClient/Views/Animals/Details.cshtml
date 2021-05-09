@@ -12,9 +12,10 @@
 </ul>
 <br>
 
-<a href="/Animals/Edit/@(Model.AnimalId)"><p>Edit</p></a>
+@Html.ActionLink("Edit Animal", "Edit", null, null, new {@class="btn btn-success btn-sm"})</p>
 <br>
 
-<a href="/Animals"><p>Return</p></a>
+@Html.ActionLink("Return", "Index", null, null, new {@class="btn btn-secondary btn-sm"})</p>
 
-<a href="/Animals/Delete/@(Model.AnimalId)"><p>DELETE ANIMAL</p></a>
+@* <a href="/Animals/Delete/@(Model.AnimalId)"><p>DELETE ANIMAL</p></a> *@
+@Html.ActionLink("Delete Animal", "Delete", new { id = Model.AnimalId }, new {@class="btn btn-danger btn-sm"})</p>

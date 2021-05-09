@@ -6,7 +6,7 @@ using System.Threading.Tasks;
 using Microsoft.AspNetCore.Mvc;
 using CretaceousClient.Models;
 
-namespace CretaceousClient.Models
+namespace CretaceousClient.Controllers
 {
   public class AnimalsController : Controller
   {
